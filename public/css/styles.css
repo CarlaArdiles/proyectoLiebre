@@ -17,43 +17,109 @@ p {
     font-size: 12px;
 }
 
+/*------------------------header------------------------*/
 div.top-header {
     display: flex;
     flex-wrap: wrap;
     padding: 5%;
+
 }
 
-header div.top-header p {
+header div p {
+    display: flex;
     width: 100%;
-    text-align: center;
+    align-items: center;
     margin-top: 10px;
+    font-size: 16px;
+}
+
+header div .centrar {
+    display: flex;
+    align-items: center;
+   /* paddig: 5% 10%;*/
+}
+
+form button {
+    height: auto;
+    width: 30px;
+    border: none;
+}
+
+form button i #search {
+    height: 30px;
+    width: 30px;
+    color: white;
 }
 
 header {
     background-color: #EAC926;
 }
 
-header div.logo,
-header .form {
-    width: 50%;
-}
+/*header div #centrar {
+    width: 30%;
 
+} */
 header div.logo {
-    padding: 10px;
+    width: 20%;
+    margin-right: 10px;
+    height: auto;
 }
 
 header .form {
-    display: flex;
-    align-items: center;
-    padding: 2px;
+    /*padding: 2px;*/
     font-size: 11px;
+    margin-right: 10px;
+    border-radius: 4px;
+
 }
+input {
+    width: 100%;
+    height: 100%;
+    border-color: white;
+    color: hsl(285, 22%, 96%);
+    background-color: white;
+    border-radius: 3PX;
+    BORDER: none;
+    font-size: 14px;
+}
+
+header form {
+    display: flex;
+    flex-direction: row;
+    outline: none;
+    color: white;
+    padding: 1px;
+    height: auto;
+    background-color: #FFF;
+    max-width: 70%;
+}
+
 
 header nav {
     font-size: 12px;
-    margin-left: 20px;
+    margin-bottom: 10px;
+    margin-right: 10px;
     opacity: 1;
 }
+
+header nav ul li {
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+    font-size: 16px;
+}
+
+ul.ssite {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+ ul.site{
+    display:flex;
+    justify-content: flex-start;
+    
+}
+
 
 header ul li {
     list-style-type: none;
@@ -64,20 +130,7 @@ header ul li a {
     color: #000;
 }
 
-header .form .input {
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 2px;
-}
 
-header .form .submit {
-    background-color: #FFF;
-    border: 1px solid #000;
-    color: #666;
-    width: 10%;
-}
 
 div.burger-menu {
     text-align: center;
@@ -94,6 +147,7 @@ div.burger-menu i {
     width: 40px;
 }
 
+/*----------------------------------main--------------------------------*/
 div.last-visit,
 div.offers {
     display: flex;
@@ -124,6 +178,11 @@ h3,
     display: none;
     margin-top: 20px;
 }
+
+article:hover .description {
+    display: block;
+}
+
 
 section.banner img {
     width: 100%;
@@ -157,13 +216,37 @@ main section article i {
     border: 1px solid #39b54a;
     background-color: #FFF;
     border-radius: 50%;
-    position: absolute;
     right: 20px;
     top: -15px;
+
+}
+
+main section article i:hover {
+    animation: willy 5s infinite;
+
+}
+
+@keyframes willy {
+    0% {
+        opacity: 25%
+    }
+
+    25% {
+        transform: rotate(-90deg);
+        opacity: 100%
+    }
+
+    100% {
+        opacity: 100%
+    }
 }
 
 main section h3 {
     margin: 20px 0px;
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
 
 article div.main-article {
@@ -190,59 +273,149 @@ main {
 
     background-color: #ebebeb;
 }
+/*---------------------diseño de login y register-----------------*/
 
-input {
-    width: 90%;
+main input {
+    width: 100%;
     height: 30px;
-    border-color: #dfdede;
-    color: rgb(104, 103, 103);
-    background-color: hsl(285, 22%, 96%);
-    margin-bottom: 20px;
+    border-color: white;
+    color: hsl(285, 22%, 96%);
+    background-color: white;
+    margin-bottom: 15px;
+    border-radius: 3PX;
+    BORDER: none;
+    font-size: 14px;
 }
+main form label{
+        font-size: 14px;
+        display: flex;
+        justify-content: left;
+        width: 100%;
+}
+main form h4{
+    display: flex;
+    justify-content: left;
+    width: 100%;
+}
+form div.profile{
+    display: flex;
+    flex-direction: row;
+    margin:10px;
+    font-size:12px ;
+    width:70%;
+    justify-content: flex-start;
+}
+form div.interests{
+    display: flex;
+    flex-direction: column;
+    margin:10px;
+    font-size:12px ;
+    width:70%;
+    justify-content: flex-start;
+}
+
+
+ .check{
+    display: inline-flex;
+    flex-direction: row;
+    margin:10px;
+    width:40%;
+    justify-content: flex-start;
+
+ }
 
 .botton {
     size: 50px;
     color: #f0f0f1;
-    background-color: hsl(244, 84%, 39%);
+    background-color: white;
+    border: none;
 }
+
+.botton:hover {
+    transition-property;
+    background-color: #0022AA;
+    transition-duration: 3s;
+}
+
+/*----------------------------footer--------------------------------*/
 
 footer {
     text-align: center;
     background-color: white;
+
+}
+
+footer section {
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 footer section i {
     font-size: 2em;
-    border-bottom: 10px;
+    margin-top: 10px;
     color: #1259c3;
     text-align: center;
 }
 
+#colorcambiante:hover {
+    transition-property;
+    color: #25ca1f;
+    transition-duration: 1s;
+}
+
+article .description:hover {
+    display: block;
+    transition-duration: 2s;
+}
+
+/* MEDIA QUERY PARA CELULAR*/
+
 @media (max-width: 361px) {
-     ul{
+    header nav {
         display: none;
     }
 
+    /*
     main section article h4 {
         display: none;
     }
-
+    header div p{
+        justify-content: center;
+    }*/
 }
 
+/* MEDIA QUERY PARA TABLET*/
+
+
 @media (min-width: 361px) {
+    /* _____________header__________*/
+
     main {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
     }
-    .top-header{
-        display:block
+
+    .top-header {
+        display: block
     }
 
-    nav {
+    header div.logo {
+        width: 20%;
+    }
+
+    header form {
+        width: 50%;
+    }
+
+    header div.centrar {
+        width:25%;
+
+    }
+   /* nav {
         display: flex;
         flex-wrap: wrap;
-    }
+    }*/
 
     ul {
         display: flex;
@@ -250,17 +423,19 @@ footer section i {
         flex-grow: 1;
         margin: 5px;
         border-left: 10px;
-    
+
     }
-    
-    main section article .description {
-        display: block;
+
+    nav ul .ssite {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: end;
     }
 
 
-    main section article {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
+    /*  __________main____________*/
+
+
 
     main section div.products {
         display: flex;
@@ -280,17 +455,67 @@ footer section i {
     }
 
 
+
     div.burger-menu {
         display: none;
     }
 
-    @media (min-width: 769px) {
-        main section div.products article {
-            width: 22%;
-        }
+}
+
+/* MEDIA QUERY PARA DESKTOP*/
+
+@media (min-width: 769px) {
+    /*_________________________header_________________________*/
+
+    .top-header {
+        justify-content: space-between;
+    }
+
+    header div.logo {
+        width: 15%;
+    }
+
+    header form {
+        width: 45%;
+    }
+
+    header div.centrar {
+        width: 30%;
+        display: flex;
+        align-items: center;
+    }
+
+
+    /*___________________________main____________________________*/
+
+    main section div.products article {
+        width: 22%;
     }
 
     .burger-menu {
         display: none;
     }
+
+    nav ul .ssite {
+        align-items: end;
+    }
+
+    h4 .description {
+        display: none;
+    }
+
+    /*________footeer________*/
+
+    footer {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    footer section {
+        display: block;
+        width: 30%;
+        align-items: center;
+    }
+
 }

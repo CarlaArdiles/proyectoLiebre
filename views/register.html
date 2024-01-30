@@ -11,23 +11,25 @@
     <body>
         <header>
             <div class="top-header">
-                <div class="logo"> 
+                <div class="logo">
                     <img src="images/logo-mercado-liebre.svg" alt="Logo de MercadoLiebre">
                 </div>
-                <div class="form" action="#" method="GET">
-                    <div class="input">Buscar productos, marcas y más</div>
-                    <div class="submit"><i class="fa fa-search"></i></div>
+                <form class="form" action="#" method="GET">
+                    <input type="text" name="search" placeholder="Buscar productos, mrcas y más">
+                    <button  type="submit"> <i id="search" class="fa fa-search"></i> </button> </input>
+                </form>
+                <div>
+                    <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
                 </div>
-                <p><i class="fas fa-hand-holding-usd"></i>Comprá en cuotas y sin tarjeta de crédito</p>
             </div>
             <nav>
-                <ul>
+                <ul class="site">
                     <li><a href="#">Ofertas</a></li>
                     <li><a href="#">Tiendas Oficiales</a></li>
                     <li><a href="#">Vender</a></li>
                     <li><a href="#">Ayuda</a></li>
                 </ul>
-                <ul>
+                <ul class="ssite">
                     <li><a href="/register">Creá tu cuenta <i class="far fa-id-card"></i></a></li>
                     <li><a href="/login">Ingresá <i class="fas fa-sign-in-alt"></i></a></li>
                     <li><a href="#">Mis compras <i class="fas fa-shopping-basket"></i></a></li>
@@ -50,34 +52,34 @@
                 <input type="text" name="addres" placeholder="Domicilio">
                 <h4>Perfil del usuario</h4>
                 <div class="profile">
-                    <input type="radio" name="profile" value="buy" id="buy">
-                    <label for="buy">Comprador</label>
-                    <input type="radio" name="profile" value="sell" id="sell">
-                    <label for="sell">Vendedor</label>
+                    <input class="profile" type="radio" name="profile" value="buy" id="buy">
+                    <label class="profile" for="buy">Comprador</label>
+                    <input class="profile" type="radio" name="profile" value="sell" id="sell">
+                    <label class="profile" for="sell">Vendedor</label>
                 </div>
 
                 <h4>Intereses</h4>
                 <div class="interests">
-                    <div>
-                        <input type="checkbox" name="interests" value="a" id="a">
-                        <label for="a">Electro</label>
+                    <div class="check">
+                        <input class="check" type="checkbox" name="interests" value="a" id="a">
+                        <label class="check" for="a">Electro</label> <br>
                     </div>
-                    <div>
-                        <input type="checkbox" name="interests" value="b" id="b">
-                        <label for="b">Moda</label>
+                    <div class="check">
+                        <input class="check" type="checkbox" name="interests" value="b" id="b">
+                        <label class="check" for="b">Moda</label> <br>
+            </div>
+            <div class="check">
+                        <input class="check" type="checkbox" name="interests" value="c" id="c">
+                        <label class="check" for="c">Hogar</label> <br>
                     </div>
-                    <div>
-                        <input type="checkbox" name="interests" value="c" id="c">
-                        <label for="c">Hogar</label>
+                    <div class="check">
+                        <input class="check" type="checkbox" name="interests" value="d" id="d">
+                        <label class="check" for="d">Juguetería</label> <br>
                     </div>
-                    <div>
-                        <input type="checkbox" name="interests" value="d" id="d">
-                        <label for="d">Juguetería</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" name="interests" value="e" id="e">
-                        <label for="e">Vida sana</label>
-                    </div>
+                    <div class="check" >
+                        <input class="check" type="checkbox" name="interests" value="e" id="e">
+                        <label class="check" for="e">Vida sana</label><br>
+                   </div>
                 </div>
                 
                 <h4>Elegí tu foto de usuario</h4>
@@ -88,7 +90,7 @@
                 <input type="password" name="pass_confirm" placeholder="Confirmá tu contraseña">
                 <br>
                 <br>
-                <input class="botton" type="submit" value="Enviar">
+                <input href="/home" class="botton" type="submit" value="Enviar">
                 <input  type="reset" value="Borrar">
                 <br>
                 <br>
